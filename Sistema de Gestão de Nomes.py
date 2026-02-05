@@ -7,12 +7,11 @@ def exibir_menu():
     print("0. Sair")
     return input("Escolha uma opção: ")
 
-
 def gerir_nomes():
     nomes = []
 
     while True:
-        opcao = exibir_menu()
+        opcao =exibir_menu()
 
         if opcao == "1":
             nome = input("Digite o nome a adicionar: ").strip()
@@ -29,7 +28,6 @@ def gerir_nomes():
                 print(f"'{nome}' foi removido.")
             else:
                 print("Erro: Nome não encontrado na lista.")
-
         elif opcao == "3":
             print("\n--- LISTA DE NOMES ---")
             if not nomes:
@@ -45,14 +43,11 @@ def gerir_nomes():
                 print(f"O nome '{nome}' foi encontrado na posição {posicao + 1}.")
             else:
                 print(f"O nome '{nome}' não existe na lista.")
-
         elif opcao == "0":
             print("A encerrar o programa... Até breve!")
             break
-
         else:
             print("Opção inválida. Tente novamente.")
-
 
 if __name__ == "__main__":
     gerir_nomes()
